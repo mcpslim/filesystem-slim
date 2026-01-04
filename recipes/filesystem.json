@@ -27,6 +27,21 @@
               "media_file",
               "multiple_files"
             ]
+          },
+          "path": {
+            "type": "string"
+          },
+          "tail": {
+            "type": "number"
+          },
+          "head": {
+            "type": "number"
+          },
+          "paths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         },
         "required": [
@@ -52,6 +67,17 @@
               "directory_with_sizes",
               "allowed_directories"
             ]
+          },
+          "path": {
+            "type": "string"
+          },
+          "sortBy": {
+            "type": "string",
+            "enum": [
+              "name",
+              "size"
+            ],
+            "default": "name"
           }
         },
         "required": [
@@ -77,6 +103,36 @@
               "edit",
               "move"
             ]
+          },
+          "path": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          },
+          "edits": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "oldText": {
+                  "type": "string"
+                },
+                "newText": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "dryRun": {
+            "type": "boolean",
+            "default": false
+          },
+          "source": {
+            "type": "string"
+          },
+          "destination": {
+            "type": "string"
           }
         },
         "required": [
@@ -100,6 +156,19 @@
               "files",
               "file_info"
             ]
+          },
+          "path": {
+            "type": "string"
+          },
+          "pattern": {
+            "type": "string"
+          },
+          "excludePatterns": {
+            "type": "array",
+            "default": [],
+            "items": {
+              "type": "string"
+            }
           }
         },
         "required": [
