@@ -1,0 +1,115 @@
+{
+  "mcp_name": "filesystem",
+  "auto_generated": true,
+  "algorithm_version": "v2.1",
+  "rules": {
+    "default_minifier": "first_sentence",
+    "remove_params_description": true
+  },
+  "groups": [
+    {
+      "name": "read",
+      "description": "read operations",
+      "mapping": {
+        "file": "read_file",
+        "text_file": "read_text_file",
+        "media_file": "read_media_file",
+        "multiple_files": "read_multiple_files"
+      },
+      "common_schema": {
+        "type": "object",
+        "properties": {
+          "action": {
+            "type": "string",
+            "enum": [
+              "file",
+              "text_file",
+              "media_file",
+              "multiple_files"
+            ]
+          }
+        },
+        "required": [
+          "action"
+        ]
+      }
+    },
+    {
+      "name": "list",
+      "description": "list operations",
+      "mapping": {
+        "directory": "list_directory",
+        "directory_with_sizes": "list_directory_with_sizes",
+        "allowed_directories": "list_allowed_directories"
+      },
+      "common_schema": {
+        "type": "object",
+        "properties": {
+          "action": {
+            "type": "string",
+            "enum": [
+              "directory",
+              "directory_with_sizes",
+              "allowed_directories"
+            ]
+          }
+        },
+        "required": [
+          "action"
+        ]
+      }
+    },
+    {
+      "name": "file",
+      "description": "file operations",
+      "mapping": {
+        "write": "write_file",
+        "edit": "edit_file",
+        "move": "move_file"
+      },
+      "common_schema": {
+        "type": "object",
+        "properties": {
+          "action": {
+            "type": "string",
+            "enum": [
+              "write",
+              "edit",
+              "move"
+            ]
+          }
+        },
+        "required": [
+          "action"
+        ]
+      }
+    },
+    {
+      "name": "query",
+      "description": "query operations",
+      "mapping": {
+        "files": "search_files",
+        "file_info": "get_file_info"
+      },
+      "common_schema": {
+        "type": "object",
+        "properties": {
+          "action": {
+            "type": "string",
+            "enum": [
+              "files",
+              "file_info"
+            ]
+          }
+        },
+        "required": [
+          "action"
+        ]
+      }
+    }
+  ],
+  "passthrough": [
+    "create_directory",
+    "directory_tree"
+  ]
+}
