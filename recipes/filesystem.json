@@ -45,7 +45,9 @@
           }
         },
         "required": [
-          "action"
+          "action",
+          "path",
+          "paths"
         ]
       }
     },
@@ -81,7 +83,8 @@
           }
         },
         "required": [
-          "action"
+          "action",
+          "path"
         ]
       }
     },
@@ -136,7 +139,12 @@
           }
         },
         "required": [
-          "action"
+          "action",
+          "path",
+          "content",
+          "edits",
+          "source",
+          "destination"
         ]
       }
     },
@@ -172,7 +180,9 @@
           }
         },
         "required": [
-          "action"
+          "action",
+          "path",
+          "pattern"
         ]
       }
     }
