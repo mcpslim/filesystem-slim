@@ -9,7 +9,7 @@
   "groups": [
     {
       "name": "read",
-      "description": "read operations",
+      "description": "Access file contents—text, images, or audio—individually or in batches from permitted directories.",
       "mapping": {
         "file": "read_file",
         "text_file": "read_text_file",
@@ -53,7 +53,7 @@
     },
     {
       "name": "list",
-      "description": "list operations",
+      "description": "Explore allowed directories, then list files and folders—including sizes—within those paths.",
       "mapping": {
         "directory": "list_directory",
         "directory_with_sizes": "list_directory_with_sizes",
@@ -90,7 +90,7 @@
     },
     {
       "name": "file",
-      "description": "file operations",
+      "description": "Manage text files by creating, editing lines, or moving/renaming them within designated directories.",
       "mapping": {
         "write": "write_file",
         "edit": "edit_file",
@@ -150,7 +150,7 @@
     },
     {
       "name": "query",
-      "description": "query operations",
+      "description": "Locate files using patterns and retrieve detailed metadata about them within permitted directories.",
       "mapping": {
         "files": "search_files",
         "file_info": "get_file_info"
@@ -190,5 +190,7 @@
   "passthrough": [
     "create_directory",
     "directory_tree"
-  ]
+  ],
+  "ai_enhanced": true,
+  "enhanced_at": "2026-01-05T07:26:29.895Z"
 }
