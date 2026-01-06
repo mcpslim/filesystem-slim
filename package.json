@@ -1,6 +1,6 @@
 {
   "name": "filesystem-slim",
-  "version": "2025.12.18",
+  "version": "2025.12.18-slim.1",
   "description": "Slimmed filesystem MCP - 54% token reduction for AI models",
   "bin": {
     "filesystem-slim": "./index.js"
