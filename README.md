@@ -55,8 +55,11 @@ Done! Restart your app to use filesystem.
 ### CLI Tools (already have CLI?)
 
 ```bash
-# Claude Code
-claude mcp add filesystem -- npx -y filesystem-slim
+# Claude Code (creates .mcp.json in project root)
+claude mcp add filesystem -s project -- npx -y filesystem-slim
+
+# Windows: use cmd /c wrapper
+claude mcp add filesystem -s project -- cmd /c npx -y filesystem-slim
 
 # VS Code (Copilot, Cline, Roo Code)
 code --add-mcp '{"name":"filesystem","command":"npx","args":["-y","filesystem-slim"]}'
