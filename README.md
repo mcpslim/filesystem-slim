@@ -56,13 +56,13 @@ Done! Restart your app to use filesystem.
 
 ```bash
 # Claude Code (creates .mcp.json in project root)
-claude mcp add filesystem -s project -- npx -y filesystem-slim
+claude mcp add filesystem -s project -- npx -y filesystem-slim@latest
 
 # Windows: use cmd /c wrapper
-claude mcp add filesystem -s project -- cmd /c npx -y filesystem-slim
+claude mcp add filesystem -s project -- cmd /c npx -y filesystem-slim@latest
 
 # VS Code (Copilot, Cline, Roo Code)
-code --add-mcp '{"name":"filesystem","command":"npx","args":["-y","filesystem-slim"]}'
+code --add-mcp '{"name":"filesystem","command":"npx","args":["-y","filesystem-slim@latest"]}'
 ```
 
 ## Manual Setup
@@ -84,7 +84,7 @@ Add to your `claude_desktop_config.json`:
   "mcpServers": {
     "filesystem": {
       "command": "npx",
-      "args": ["-y", "filesystem-slim"]
+      "args": ["-y", "filesystem-slim@latest"]
     }
   }
 }
@@ -99,7 +99,7 @@ Add to `.cursor/mcp.json` (global) or `<project>/.cursor/mcp.json` (project):
   "mcpServers": {
     "filesystem": {
       "command": "npx",
-      "args": ["-y", "filesystem-slim"]
+      "args": ["-y", "filesystem-slim@latest"]
     }
   }
 }
