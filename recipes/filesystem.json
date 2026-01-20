@@ -4,12 +4,12 @@
   "algorithm_version": "v2.1",
   "rules": {
     "default_minifier": "first_sentence",
-    "remove_params_description": true
+    "remove_params_description": false
   },
   "groups": [
     {
       "name": "read",
-      "description": "Access file contents—text, images, or audio—individually or in batches from permitted directories.",
+      "description": "Access file contents—text, images, or audio—individually or in batches, with encoding and error handling.",
       "mapping": {
         "file": "read_file",
         "text_file": "read_text_file",
@@ -32,10 +32,12 @@
             "type": "string"
           },
           "tail": {
-            "type": "number"
+            "type": "number",
+            "description": "If provided, returns only the last N lines of the file"
           },
           "head": {
-            "type": "number"
+            "type": "number",
+            "description": "If provided, returns only the first N lines of the file"
           },
           "paths": {
             "type": "array",
@@ -150,7 +152,7 @@
     },
     {
       "name": "query",
-      "description": "Locate files using patterns and retrieve detailed metadata about them within permitted directories.",
+      "description": "Locate files matching patterns and retrieve detailed metadata about them within permitted directories.",
       "mapping": {
         "files": "search_files",
         "file_info": "get_file_info"
@@ -192,5 +194,5 @@
     "directory_tree"
   ],
   "ai_enhanced": true,
-  "enhanced_at": "2026-01-07T00:30:43.606Z"
+  "enhanced_at": "2026-01-20T00:44:22.698Z"
 }
