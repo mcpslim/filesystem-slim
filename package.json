@@ -1,6 +1,6 @@
 {
   "name": "filesystem-slim",
-  "version": "2025.12.18-slim.1.10",
+  "version": "2025.12.18-slim.1.11",
   "description": "filesystem MCP (54% less tokens). Quick setup: npx filesystem-slim --setup",
   "bin": {
     "filesystem-slim": "./index.js"
